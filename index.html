@@ -7,6 +7,7 @@
     <title>Trabalho de Física</title>
 
     <style>
+
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
         * {
@@ -21,27 +22,46 @@
 
         body {
             font-family: 'Inter', Arial, sans-serif;
+
             background:
-                radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.15), transparent 30%),
-                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.10), transparent 30%),
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(37, 99, 235, 0.15),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    rgba(59, 130, 246, 0.10),
+                    transparent 30%
+                ),
                 #070b14;
+
             color: #f8fafc;
             min-height: 100vh;
         }
 
-        /* BARRA SUPERIOR */
+
+        /* =========================
+           BARRA SUPERIOR
+        ========================= */
 
         nav {
             width: 100%;
             padding: 22px 8%;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
             background: rgba(7, 11, 20, 0.75);
+
             backdrop-filter: blur(15px);
+
             position: sticky;
             top: 0;
+
             z-index: 100;
         }
 
@@ -66,70 +86,109 @@
             color: white;
         }
 
-        /* HERO */
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
 
         .hero {
             min-height: 75vh;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
             text-align: center;
+
             padding: 80px 20px;
+
             position: relative;
             overflow: hidden;
         }
 
         .hero::before {
             content: "";
+
             position: absolute;
+
             width: 500px;
             height: 500px;
+
             background: rgba(37, 99, 235, 0.12);
+
             border-radius: 50%;
+
             filter: blur(100px);
+
             z-index: -1;
         }
 
         .tag {
             display: inline-block;
+
             padding: 8px 16px;
+
             border: 1px solid rgba(59, 130, 246, 0.35);
+
             background: rgba(59, 130, 246, 0.08);
+
             color: #60a5fa;
+
             border-radius: 50px;
+
             font-size: 13px;
+
             font-weight: 600;
+
             letter-spacing: 1px;
+
             margin-bottom: 25px;
         }
 
         .hero h1 {
             font-size: clamp(42px, 7vw, 82px);
+
             font-weight: 800;
+
             letter-spacing: -3px;
+
             line-height: 1;
+
             margin-bottom: 25px;
         }
 
         .hero h1 span {
-            background: linear-gradient(90deg, #60a5fa, #2563eb);
+            background: linear-gradient(
+                90deg,
+                #60a5fa,
+                #2563eb
+            );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .hero p {
             max-width: 650px;
+
             color: #94a3b8;
+
             font-size: 18px;
+
             line-height: 1.7;
         }
 
-        /* CONTEÚDO */
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
 
         main {
             max-width: 1100px;
+
             margin: auto;
+
             padding: 60px 25px 100px;
         }
 
@@ -139,155 +198,337 @@
 
         .section-title small {
             color: #3b82f6;
+
             font-size: 12px;
+
             font-weight: 700;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
         }
 
         .section-title h2 {
             font-size: 34px;
+
             margin-top: 8px;
         }
 
-        /* INTEGRANTES */
+
+        /* =========================
+           INTEGRANTES
+        ========================= */
 
         .members {
             display: grid;
+
             grid-template-columns: repeat(6, 1fr);
+
             gap: 12px;
+
             margin-bottom: 100px;
         }
 
         .member {
             padding: 20px 10px;
+
             text-align: center;
+
             background: rgba(255, 255, 255, 0.04);
+
             border: 1px solid rgba(255, 255, 255, 0.08);
+
             border-radius: 14px;
+
             transition: 0.3s;
         }
 
         .member:hover {
             transform: translateY(-5px);
+
             border-color: rgba(59, 130, 246, 0.5);
+
             background: rgba(59, 130, 246, 0.08);
         }
 
         .member-icon {
             width: 42px;
             height: 42px;
+
             margin: 0 auto 12px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+            background: linear-gradient(
+                135deg,
+                #2563eb,
+                #1d4ed8
+            );
+
             font-weight: 700;
         }
 
         .member p {
             font-size: 13px;
+
             color: #cbd5e1;
+
             font-weight: 600;
         }
 
-        /* MATERIAIS */
+
+        /* =========================
+           MATERIAIS
+        ========================= */
 
         .materials {
             display: grid;
+
             grid-template-columns: repeat(2, 1fr);
+
             gap: 18px;
+
             margin-bottom: 100px;
         }
 
         .material {
             position: relative;
+
             padding: 30px;
+
             min-height: 170px;
+
             border-radius: 20px;
+
             background: linear-gradient(
                 145deg,
                 rgba(255,255,255,0.07),
                 rgba(255,255,255,0.025)
             );
+
             border: 1px solid rgba(255, 255, 255, 0.08);
+
             overflow: hidden;
+
             transition: 0.35s;
         }
 
         .material::after {
             content: "";
+
             position: absolute;
+
             width: 100px;
             height: 100px;
+
             right: -30px;
             bottom: -30px;
+
             border-radius: 50%;
+
             background: rgba(37, 99, 235, 0.12);
         }
 
         .material:hover {
             transform: translateY(-7px);
+
             border-color: rgba(59, 130, 246, 0.45);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.25);
         }
 
         .material-number {
             color: #3b82f6;
+
             font-size: 13px;
+
             font-weight: 700;
+
             margin-bottom: 18px;
         }
 
         .material h3 {
             font-size: 22px;
+
             margin-bottom: 8px;
         }
 
         .material p {
             color: #94a3b8;
+
             font-size: 14px;
         }
 
-        /* ÁREA FINAL */
+
+        /* =========================
+           ETAPAS DA MONTAGEM
+        ========================= */
+
+        .steps-section {
+            margin-bottom: 100px;
+        }
+
+        .step {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+            margin-bottom: 35px;
+
+            padding: 25px;
+
+            border-radius: 24px;
+
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.055),
+                rgba(255,255,255,0.018)
+            );
+
+            border: 1px solid rgba(255, 255, 255, 0.07);
+
+            transition: 0.35s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+
+            border-color: rgba(59, 130, 246, 0.35);
+
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.22);
+        }
+
+        .step-image {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            aspect-ratio: 4 / 3;
+
+            background: #111827;
+        }
+
+        .step-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: 0.5s;
+        }
+
+        .step:hover .step-image img {
+            transform: scale(1.04);
+        }
+
+        .step-content {
+            padding: 10px;
+        }
+
+        .step-number {
+            color: #3b82f6;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 12px;
+
+            text-transform: uppercase;
+        }
+
+        .step-content h3 {
+            font-size: 25px;
+
+            line-height: 1.3;
+
+            margin-bottom: 15px;
+        }
+
+        .step-content p {
+            color: #94a3b8;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           CARD FINAL
+        ========================= */
 
         .final-card {
             padding: 45px;
+
             border-radius: 24px;
+
             text-align: center;
+
             background:
                 linear-gradient(
                     135deg,
                     rgba(37, 99, 235, 0.18),
                     rgba(15, 23, 42, 0.4)
                 );
+
             border: 1px solid rgba(59, 130, 246, 0.25);
         }
 
         .final-card h2 {
             font-size: 30px;
+
             margin-bottom: 12px;
         }
 
         .final-card p {
             color: #94a3b8;
+
             max-width: 650px;
+
             margin: auto;
+
             line-height: 1.7;
         }
 
-        /* RODAPÉ */
+
+        /* =========================
+           RODAPÉ
+        ========================= */
 
         footer {
             border-top: 1px solid rgba(255, 255, 255, 0.08);
+
             padding: 30px;
+
             text-align: center;
+
             color: #64748b;
+
             font-size: 13px;
         }
 
-        /* CELULAR */
+
+        /* =========================
+           TABLET / CELULAR
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -303,6 +544,18 @@
                 grid-template-columns: 1fr;
             }
 
+            .step {
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+
+                padding: 18px;
+            }
+
+            .step-content h3 {
+                font-size: 22px;
+            }
+
             .hero {
                 min-height: 65vh;
             }
@@ -311,6 +564,11 @@
                 letter-spacing: -2px;
             }
         }
+
+
+        /* =========================
+           CELULARES PEQUENOS
+        ========================= */
 
         @media (max-width: 500px) {
 
@@ -329,21 +587,39 @@
             .final-card {
                 padding: 30px 20px;
             }
+
+            .step-image {
+                aspect-ratio: 4 / 3;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- MENU -->
+
+    <!-- =========================
+         MENU
+    ========================= -->
 
     <nav>
-        <div class="logo">FÍSICA<span>.</span></div>
-        <a href="#materiais">Materiais</a>
+
+        <div class="logo">
+            FÍSICA<span>.</span>
+        </div>
+
+        <a href="#materiais">
+            Materiais
+        </a>
+
     </nav>
 
 
-    <!-- CABEÇALHO -->
+    <!-- =========================
+         CABEÇALHO
+    ========================= -->
 
     <section class="hero">
 
@@ -366,15 +642,23 @@
 
     <main>
 
-        <!-- INTEGRANTES -->
+
+        <!-- =========================
+             INTEGRANTES
+        ========================= -->
 
         <div class="section-title">
 
-            <small>Equipe</small>
+            <small>
+                Equipe
+            </small>
 
-            <h2>Integrantes do projeto</h2>
+            <h2>
+                Integrantes do projeto
+            </h2>
 
         </div>
+
 
         <section class="members">
 
@@ -411,23 +695,36 @@
         </section>
 
 
-        <!-- MATERIAIS -->
+
+        <!-- =========================
+             MATERIAIS
+        ========================= -->
 
         <div class="section-title" id="materiais">
 
-            <small>Projeto</small>
+            <small>
+                Projeto
+            </small>
 
-            <h2>Materiais utilizados</h2>
+            <h2>
+                Materiais utilizados
+            </h2>
 
         </div>
 
+
         <section class="materials">
+
 
             <div class="material">
 
-                <div class="material-number">01</div>
+                <div class="material-number">
+                    01
+                </div>
 
-                <h3>Fita</h3>
+                <h3>
+                    Fita
+                </h3>
 
                 <p>
                     Utilizada para unir, reforçar e dar acabamento
@@ -439,9 +736,13 @@
 
             <div class="material">
 
-                <div class="material-number">02</div>
+                <div class="material-number">
+                    02
+                </div>
 
-                <h3>Estilete</h3>
+                <h3>
+                    Estilete
+                </h3>
 
                 <p>
                     Utilizado para realizar cortes precisos
@@ -453,9 +754,13 @@
 
             <div class="material">
 
-                <div class="material-number">03</div>
+                <div class="material-number">
+                    03
+                </div>
 
-                <h3>Cola Quente</h3>
+                <h3>
+                    Cola Quente
+                </h3>
 
                 <p>
                     Utilizada para fixar e unir os componentes
@@ -467,9 +772,13 @@
 
             <div class="material">
 
-                <div class="material-number">04</div>
+                <div class="material-number">
+                    04
+                </div>
 
-                <h3>Caixas de Papelão</h3>
+                <h3>
+                    Caixas de Papelão
+                </h3>
 
                 <p>
                     Utilizadas como principal material estrutural
@@ -478,14 +787,152 @@
 
             </div>
 
+
         </section>
 
 
-        <!-- FINAL -->
+
+        <!-- =========================
+             ETAPAS DA MONTAGEM
+        ========================= -->
+
+        <section class="steps-section">
+
+
+            <div class="section-title">
+
+                <small>
+                    Processo
+                </small>
+
+                <h2>
+                    Etapas da montagem
+                </h2>
+
+            </div>
+
+
+            <!-- ETAPA 01 -->
+
+            <div class="step">
+
+                <div class="step-image">
+
+                    <img
+                        src="imagens/etapa1.jpeg"
+                        alt="Caixas de papelão e materiais utilizados na primeira etapa"
+                    >
+
+                </div>
+
+
+                <div class="step-content">
+
+                    <div class="step-number">
+                        Etapa 01
+                    </div>
+
+                    <h3>
+                        Preparação dos materiais
+                    </h3>
+
+                    <p>
+                        Juntar as caixas de papelão e recortá-las
+                        com o estilete, preparando os materiais
+                        necessários para iniciar a construção
+                        do projeto.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ETAPA 02 -->
+
+            <div class="step">
+
+                <div class="step-image">
+
+                    <img
+                        src="imagens/etapa2.jpeg"
+                        alt="Caixas de papelão recortadas para formar a estrutura"
+                    >
+
+                </div>
+
+
+                <div class="step-content">
+
+                    <div class="step-number">
+                        Etapa 02
+                    </div>
+
+                    <h3>
+                        Preparação da estrutura
+                    </h3>
+
+                    <p>
+                        Caixas recortadas para fazer as quatro
+                        laterais e as duas bases que irão formar
+                        a estrutura principal do projeto.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ETAPA 03 -->
+
+            <div class="step">
+
+                <div class="step-image">
+
+                    <img
+                        src="imagens/etapa3.jpeg"
+                        alt="Caixas de papelão pintadas de cinza"
+                    >
+
+                </div>
+
+
+                <div class="step-content">
+
+                    <div class="step-number">
+                        Etapa 03
+                    </div>
+
+                    <h3>
+                        Finalização e acabamento
+                    </h3>
+
+                    <p>
+                        Caixas de papelão pintadas com tinta spray
+                        para deixar o projeto mais bonito, uniforme
+                        e com um acabamento mais profissional.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             FINAL
+        ========================= -->
 
         <section class="final-card">
 
-            <h2>Construindo conhecimento</h2>
+            <h2>
+                Construindo conhecimento
+            </h2>
 
             <p>
                 Este projeto representa o trabalho conjunto da equipe,
@@ -495,14 +942,21 @@
 
         </section>
 
+
     </main>
 
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
 
     <footer>
 
         Trabalho de Física • Projeto acadêmico • 2026
 
     </footer>
+
 
 </body>
 </html>
